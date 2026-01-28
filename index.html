@@ -63,8 +63,9 @@
         
         
  body {
-            height: 100%
+           
             margin: 0;
+            padding: 0;
         }
         
   /* CONTENIDO DE PORTADA */      
@@ -96,7 +97,7 @@
 .titulo {
   font-family: 'Ballet';
   font-size: 2rem;
-  margin-top: 5.3vh; /* ← aquí está el 0.53 */
+  margin-top: 0vh; /* ← aquí está el 0.53 */
   margin-bottom: 18rem;
 }
 
@@ -396,6 +397,8 @@ font-style: italic; /* cursiva */
   box-shadow: 8px 8px 20px rgba(0,0,0,0.6),
               -4px -4px 12px rgba(255,255,255,0.2);
   width: min(85vw, 340px);
+  
+  max-width: 420px;
 }
 
 /* CONTADOR */
@@ -745,7 +748,7 @@ box-shadow:
         }
         .titulo-itinerario {
          display: inline-block;
-         transform: translateX(-80%); /* ⬅️ mueve a la izquierda */
+         transform: translateX(-70%); /* ⬅️ mueve a la izquierda */
   
           font-family: 'Ballet', cursive;
           font-weight: 300;
