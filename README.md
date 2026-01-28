@@ -372,11 +372,11 @@ font-style: italic; /* cursiva */
 }
 
 .fecha-boda::before {
-  left: -5%;
+  left: 0%;
 }
 
 .fecha-boda::after {
-  right: -5%;
+  right: 0%;
   
 }
 
