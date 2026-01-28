@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Metadatos Open Graph -->
     <meta property="og:title" content="¡Estás invitado a nuestra boda ❤️! Taylor & Travis">
     <meta property="og:description" content="¡Boda Taylor y Travis! Mira todos los detalles aquí.">
@@ -281,6 +281,7 @@
   font-size: 36px;
   margin-top: 60px;  /* 3 renglones de separación */
   margin-bottom: 60px; /* separación hacia nombres */
+  
 }
 
 /* NOMBRES DE PADRES (Castoro Titling) */
@@ -352,6 +353,7 @@ font-style: italic; /* cursiva */
   box-shadow: 8px 8px 20px rgba(0,0,0,0.6),
               -4px -4px 12px rgba(255,255,255,0.2);
   transform: translateZ(0);
+  width: min(90vw, 425px)
 }
 
 /* CONTADOR */
@@ -718,7 +720,7 @@ box-shadow:
   top: 50%;
   transform: translateY(-50%);
 
-  width: 230px;         /* largo de la línea */
+  width: 38vw;         /* largo de la línea */
   height: 1px;
 
   border-bottom: 2px solid #555;
@@ -747,8 +749,8 @@ box-shadow:
         .line-progress {
             position: absolute;
             left: 50%;
-            width: 4px;
-            height: 60%;
+            width: 3px;
+            height: 10%;
             /* controlada por JS */
             background: #000;
             transform: translateX(-50%);
@@ -940,7 +942,8 @@ box-shadow:
 }
 
 .iconos-dresscode img {
-  width: 70px;
+  height: 150px;
+  width: auto; 
   opacity: 0.8;
 }
 
@@ -1031,6 +1034,17 @@ box-shadow:
 
 
         /* ---------- Animaciones base + apariciones al hacer scroll ---------- */
+        @keyframes aparecerDesdeAbajo {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
         @keyframes fadeIn {
             from {
                 opacity: 0
@@ -1403,8 +1417,8 @@ box-shadow:
   <h2 class="titulo-ballet">Dress Code</h2>
 
   <div class="iconos-dresscode">
-    <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/vestido.png?raw=true" alt="Vestido">
-    <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/smoking.png?raw=true" alt="Smoking">
+    <img src="https://github.com/EstasInvitado/Taylor-Y-Travis/blob/main/VestidoEtiqueta.png?raw=true" alt="Vestido">
+    <img src="https://github.com/EstasInvitado/Taylor-Y-Travis/blob/main/TrajeEtiqueta.png?raw=true" alt="Smoking">
   </div>
 
   <p class="texto-dresscode">Formal</p>
@@ -1453,7 +1467,7 @@ box-shadow:
         
         
         /* --------- Apariciones al hacer scroll --------- */
-        const revealEls = document.querySelectorAll('.photos, .hero-text, .h, .monogram, .reveal, .tile, .card, .step, .g, .btn');
+        const revealEls = document.querySelectorAll('.photos, .titulo-save, .texto-secundario, .hero-text, .h, .monogram, .reveal, .tile, .card, .step, .g, .btn');
         const io = new IntersectionObserver((entries) => {
             entries.forEach(e => {
                 if (e.isIntersecting) {
@@ -1462,7 +1476,7 @@ box-shadow:
                 }
             });
         }, {
-            threshold: .18
+            threshold: .19
         });
         revealEls.forEach(el => io.observe(el));
 
