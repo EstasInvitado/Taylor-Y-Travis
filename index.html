@@ -281,6 +281,7 @@
   font-size: 36px;
   margin-top: 60px;  /* 3 renglones de separación */
   margin-bottom: 60px; /* separación hacia nombres */
+  
 }
 
 /* NOMBRES DE PADRES (Castoro Titling) */
@@ -940,7 +941,8 @@ box-shadow:
 }
 
 .iconos-dresscode img {
-  width: 70px;
+  height: 150px;
+  width: auto; 
   opacity: 0.8;
 }
 
@@ -1031,6 +1033,17 @@ box-shadow:
 
 
         /* ---------- Animaciones base + apariciones al hacer scroll ---------- */
+        @keyframes aparecerDesdeAbajo {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
         @keyframes fadeIn {
             from {
                 opacity: 0
@@ -1403,8 +1416,8 @@ box-shadow:
   <h2 class="titulo-ballet">Dress Code</h2>
 
   <div class="iconos-dresscode">
-    <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/vestido.png?raw=true" alt="Vestido">
-    <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/smoking.png?raw=true" alt="Smoking">
+    <img src="https://github.com/EstasInvitado/Taylor-Y-Travis/blob/main/VestidoEtiqueta.png?raw=true" alt="Vestido">
+    <img src="https://github.com/EstasInvitado/Taylor-Y-Travis/blob/main/TrajeEtiqueta.png?raw=true" alt="Smoking">
   </div>
 
   <p class="texto-dresscode">Formal</p>
@@ -1453,7 +1466,7 @@ box-shadow:
         
         
         /* --------- Apariciones al hacer scroll --------- */
-        const revealEls = document.querySelectorAll('.photos, .hero-text, .h, .monogram, .reveal, .tile, .card, .step, .g, .btn');
+        const revealEls = document.querySelectorAll('.photos, .titulo-save, .texto-secundario, .hero-text, .h, .monogram, .reveal, .tile, .card, .step, .g, .btn');
         const io = new IntersectionObserver((entries) => {
             entries.forEach(e => {
                 if (e.isIntersecting) {
@@ -1462,7 +1475,7 @@ box-shadow:
                 }
             });
         }, {
-            threshold: .18
+            threshold: .19
         });
         revealEls.forEach(el => io.observe(el));
 
