@@ -28,6 +28,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
 
 
     <!-- Importar fuente Italianno desde Google Fonts -->
@@ -151,10 +153,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   font-family: 'Monsieur La Doulaise', cursive;
   font-size: 4rem;
-  animation: yIn 1s cubic-bezier(.22,.61,.36,1) 0.6s forwards;
 }
 @keyframes taylorIn {
   from {
@@ -343,17 +343,59 @@ font-style: italic; /* cursiva */
   border-bottom: 2px solid #555;
   border-radius: 0 0 100% 100%;
 }
+.fecha-boda {
+  margin: 18px 0 6px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 6vw, 46px);
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #111;
+  position: relative;
+  text-align: center;
+  margin-bottom: 2em; /
+   margin-top: 1em;
+}
+
+/* líneas decorativas */
+.fecha-boda::before,
+.fecha-boda::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 1px;
+  background: #111;
+  opacity: 0.4;
+}
+
+.fecha-boda::before {
+  left: -80px;
+}
+
+.fecha-boda::after {
+  right: -80px;
+}
+
+/* texto "Faltan" */
+.faltan-texto {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 22px;
+}
+
+
 
 /* CUADRO NEGRO CON EFECTO 3D Y MARCO */
 .cuadro-contador {
   background: #000;
   border: 3px solid #fff;
-  padding: 30px 40px;
+  padding: 24px 30px; /* también reducimos padding */
   display: inline-block;
   box-shadow: 8px 8px 20px rgba(0,0,0,0.6),
               -4px -4px 12px rgba(255,255,255,0.2);
-  transform: translateZ(0);
-  width: min(90vw, 425px)
+  width: min(85vw, 340px);
 }
 
 /* CONTADOR */
@@ -370,7 +412,7 @@ font-style: italic; /* cursiva */
 /* NUMEROS (Castoro Titling) */
 .numero {
   font-family: "Castoro Titling", serif;
-  font-size: 40px;
+  font-size: 35px;
   color: #ffffff;
   margin: 0;
 }
@@ -378,7 +420,7 @@ font-style: italic; /* cursiva */
 /* UNIDADES */
 .unidad {
   font-family: "Castoro Titling", serif;
-  font-size: 16px;
+  font-size: 10px;
   color: #ffffff;
   margin: 0;
 }
@@ -1245,6 +1287,8 @@ box-shadow:
 <section class="cuenta-regresiva" id="cuenta-regresiva">
   <div class="contenedor-regresiva">
     <h2 class="titulo-save">Save  the  Date</h2>
+    <p class="fecha-boda">20 · JUNIO · 2026</p>
+    <p class="faltan-texto">Faltan:</p>
 
     <div class="cuadro-contador">
       <div class="contador">
