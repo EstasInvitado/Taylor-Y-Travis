@@ -372,11 +372,11 @@ font-style: italic; /* cursiva */
 }
 
 .fecha-boda::before {
-  left: -80px;
+  left: -20%;
 }
 
 .fecha-boda::after {
-  right: -80px;
+  right: -20%;
 }
 
 /* texto "Faltan" */
