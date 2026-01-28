@@ -1490,7 +1490,7 @@ box-shadow:
         <div class="container reveal" style="text-align:center">
             <h2 class="titulo-castoro">¿Nos acompañas?</h2>
             <p class="sub reveal">Confirma tu asistencia antes del<br>
-                <strong>1 de octubre de 2025</strong>.
+                <strong>1 de junio de 2026</strong>.
             </p>
 
             <p>
@@ -1503,7 +1503,7 @@ box-shadow:
   <span class="love">Con amor</span>
   <span class="heart">♥</span>
   <strong>Taylor & Travis</strong>
-  <span class="date">15 · 10 · 26</span>
+  <span class="date">20 · 06 · 26</span>
 </footer>
 
 
@@ -1525,8 +1525,8 @@ box-shadow:
         revealEls.forEach(el => io.observe(el));
 
         /* --------- Cuenta regresiva --------- */
-       // Fecha objetivo: 25 de junio de 2026
-  const fechaObjetivo = new Date("June 25, 2026 00:00:00").getTime();
+       // Fecha objetivo: 20 de junio de 2026
+  const fechaObjetivo = new Date("June 20, 2026 00:00:00").getTime();
 
   function actualizarCuenta() {
     const ahora = new Date().getTime();
