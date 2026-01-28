@@ -70,9 +70,11 @@
         
   /* CONTENIDO DE PORTADA */      
 .fondo {
-  position: relative;
+   position: relative;
   height: 100vh;
-  background-image: var(--foto2);
+  background-image: 
+    linear-gradient(to bottom, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 100%), 
+    var(--foto2);
   background-size: cover;
   background-position: center;
 }
