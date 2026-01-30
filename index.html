@@ -195,32 +195,28 @@
 
 
 .music-player {
-  position: absolute;
-  bottom: 490px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;        /* ancho del reproductor */
-  max-width: 600px;  /* ancho máximo */
-  text-align: center;
-  background: rgba(255, 255, 255, 0.1); /* transparente, se puede cambiar */
-  padding: 8px 12px; /* reduce la altura */
-  border-radius: 12px; /* bordes redondeados */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
 }
 
-.music-player audio {
-    
-  width: 100%;
-  height: 30px; /* más delgado */
-  border-radius: 8px;
-  background: #fff; /* color de la barra de audio */
-  outline: none;
+#musicToggle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
 }
 
-/* Opcional: hover para darle efecto */
-.music-player:hover {
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
+
+
+
+
+
 
        
        
@@ -1264,13 +1260,21 @@ box-shadow:
     </div>
   </div>
  <!-- REPRODUCTOR DE MÚSICA -->
- <div class="music-player"> 
-  <audio controls>
+<div class="music-player">
+  <button id="musicToggle" aria-label="Música">♫</button>
+
+  <audio id="audio" preload="none">
     <source src="https://github.com/EstasInvitado/Taylor-Y-Travis/raw/refs/heads/main/(Audio)%20Screen%20Recording%202026-01-29%20153029.m4a" type="audio/mp4">
     Tu navegador no soporta audio.
   </audio>
 </div>
+
+
+
+
+
 <i class="scroll-indicator" aria-hidden="true"></i>
+    </header>
     
 <!-- agradecimientos-->
 <section class="agradecimientos" id="agradecimientos">
@@ -1520,7 +1524,23 @@ box-shadow:
 
 
     <script>
-        
+         /* --------- boton de musica --------- */
+          document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("audio");
+    const btn = document.getElementById("musicToggle");
+
+    btn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play().catch(err => {
+          console.log("Error al reproducir:", err);
+        });
+        btn.textContent = "❚❚";
+      } else {
+        audio.pause();
+        btn.textContent = "♫";
+      }
+    });
+  });
         
         /* --------- Apariciones al hacer scroll --------- */
         const revealEls = document.querySelectorAll('.photos, .titulo-save, .texto-secundario, .hero-text, .h, .monogram, .reveal, .tile, .card, .step, .g, .btn');
@@ -1598,4 +1618,3 @@ box-shadow:
 </body>
 
 </html>
-
