@@ -63,7 +63,7 @@
         
         
  body {
-           
+            position: relative; /* asegura que absolute se mida desde el body */
             margin: 0;
             padding: 0;
         }
@@ -373,7 +373,7 @@ font-style: italic; /* cursiva */
   content: "";
   position: absolute;
   top: 50%;
-  width: 60px;
+  width: 40px;
   height: 1px;
   background: #111;
   opacity: 0.4;
