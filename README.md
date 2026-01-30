@@ -196,25 +196,33 @@
 
 .music-player {
   position: absolute;
-  bottom: 40px; /* ajusta para que quede arriba del scroll */
+  bottom: 60px;
   left: 50%;
+ 
   transform: translateX(-50%);
-  width: 90%;
+  width: 80%;        /* ancho del reproductor */
+  max-width: 500px;  /* ancho máximo */
   text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* transparente, se puede cambiar */
+  padding: 8px 12px; /* reduce la altura */
+  border-radius: 12px; /* bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .music-player audio {
+    
   width: 100%;
+  height: 30px; /* más delgado */
+  border-radius: 8px;
+  background: #fff; /* color de la barra de audio */
+  outline: none;
 }
-.play-btn {
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  font-weight: bold;
+
+/* Opcional: hover para darle efecto */
+.music-player:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
+
        
        
 
@@ -1257,14 +1265,13 @@ box-shadow:
     </div>
   </div>
  <!-- REPRODUCTOR DE MÚSICA -->
-  <div class="music-player">
-    <audio controls>
-      <source src="ruta-de-tu-cancion.mp3" type="audio/mpeg">
-      Tu navegador no soporta audio.
-    </audio>
-  </div>
-  <i class="scroll-indicator" aria-hidden="true"></i>
-    </header>
+ <div class="music-player"> 
+  <audio controls>
+    <source src="https://github.com/EstasInvitado/Taylor-Y-Travis/raw/refs/heads/main/(Audio)%20Screen%20Recording%202026-01-29%20153029.m4a" type="audio/mp4">
+    Tu navegador no soporta audio.
+  </audio>
+</div>
+<i class="scroll-indicator" aria-hidden="true"></i>
     
 <!-- agradecimientos-->
 <section class="agradecimientos" id="agradecimientos">
@@ -1592,3 +1599,4 @@ box-shadow:
 </body>
 
 </html>
+
