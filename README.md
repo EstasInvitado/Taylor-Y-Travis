@@ -196,12 +196,11 @@
 
 .music-player {
   position: absolute;
-  bottom: 60px;
+  bottom: 490px;
   left: 50%;
- 
   transform: translateX(-50%);
   width: 80%;        /* ancho del reproductor */
-  max-width: 500px;  /* ancho máximo */
+  max-width: 600px;  /* ancho máximo */
   text-align: center;
   background: rgba(255, 255, 255, 0.1); /* transparente, se puede cambiar */
   padding: 8px 12px; /* reduce la altura */
