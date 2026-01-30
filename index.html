@@ -1507,7 +1507,7 @@ box-shadow:
             </p>
 
             <p>
-                <a class="btn whatsapp" href="https://wa.me/526647629596?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Nelly%20y%20Samuel" target="_blank" rel="noreferrer noopener">Confirmar por WhatsApp</a>
+                <a class="btn whatsapp" href="https://wa.me/526647629596?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Taylor%20y%Travis.%20Nombre:%20*Agrega%20tu%20nombre*" target="_blank" rel="noreferrer noopener">Confirmar por WhatsApp</a>
             </p>
         </div>
     </section>
