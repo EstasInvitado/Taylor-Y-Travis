@@ -142,12 +142,12 @@
 /* ESPACIOS VERTICALES */
 .taylor {
   margin-bottom: 3.8rem;
-  animation: taylorIn 8s cubic-bezier(.22,.61,.36,1) 0.2s forwards;
+  animation: taylorIn 3s cubic-bezier(.22,.61,.36,1) 0.2s forwards;
 }
 
 .travis {
-  margin-top: 4.8rem;
-  animation: travisIn 7s cubic-bezier(.22,.61,.36,1) 0.4s forwards;
+  margin-top: 6.8rem;
+  animation: travisIn 3s cubic-bezier(.22,.61,.36,1) 0.4s forwards;
 }
 
 /* Y PERFECTAMENTE CENTRADA */
@@ -191,6 +191,37 @@
     opacity: 1;
   }
 }
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.hero-text.in {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* estado inicial */
+.js-appear-left {
+  opacity: 0;
+}
+
+/* cuando el script activa la animación */
+.js-appear-left.show {
+  animation: slideInLeft 3s cubic-bezier(.12,.31,.36,2) forwards;
+}
+
 
 
 
@@ -210,7 +241,15 @@
   color: white;
   font-size: 22px;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
 }
+
+
 
 
 
@@ -462,7 +501,7 @@ font-style: italic; /* cursiva */
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            transition: transform .6s ease;
+            transition: transform 4.6s ease;
         }
 
         /*este es para que se abra la fotito del cuadrito que esta en el centro img1*/
@@ -600,6 +639,8 @@ font-style: italic; /* cursiva */
     box-sizing: border-box; /* IMPORTANTE */
     padding: 30px;
     border: 14px solid #fff;
+    animation: slideUp 1.8s ease-out forwards; /* antes 0.8s */
+    
 }
 
 .card::before {
@@ -607,6 +648,7 @@ font-style: italic; /* cursiva */
   position: absolute;
   inset: 10px;
   border: 2px solid #d3d3d3;
+  animation: slideUp 1.8s ease-out forwards; /* antes 0.8s */
 
  }
 
@@ -625,12 +667,14 @@ font-style: italic; /* cursiva */
             /* centrada y con espacio debajo */
             border-radius: 8px;
             /* opcional */
+            animation: slideUp 1.8s ease-out forwards; /* antes 0.8s */
         }
 
         .details .card p:nth-of-type(1) {
             font-family: "Castoro Titling", serif;
             font-size: 13px;
             /* primera línea */
+            
         }
 
         .details .card p:nth-of-type(2) {
@@ -683,8 +727,8 @@ box-shadow:
     0 1px 2px rgba(255, 255, 255, 0.15); /* luz superior */
 
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 1.2s ease,
+    box-shadow 1.2s ease;
         }
 
         .btn:hover {
@@ -906,7 +950,7 @@ box-shadow:
     0 25px 50px rgba(0, 0, 0, 0.45),
     0 10px 20px rgba(0, 0, 0, 0.35);
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 1.2s cubic-bezier(.22,.61,.36,1);
 }
 
 .tarjeta-regalo:hover {
@@ -915,6 +959,9 @@ box-shadow:
     0 35px 60px rgba(0, 0, 0, 0.55),
     0 15px 30px rgba(0, 0, 0, 0.4);
 }
+ 
+
+
 
 /* TÍTULOS */
 .titulo-regalo {
@@ -968,12 +1015,23 @@ box-shadow:
   letter-spacing: 0.15em;
 }
 
-  /* Contenido del Dress code */
+
+
+
+  /*--------------- Contenido del Dress code--------------- */
   /* CONTENEDOR */
 .dresscode {
   text-align: center;
   padding: 6rem 1rem;
   
+}
+
+.dresscode .titulo-ballet {
+  opacity: 0;
+}
+
+.dresscode .titulo-ballet.animate {
+  animation: slideInRight 1.2s cubic-bezier(.22,.61,.36,1) forwards;
 }
 
 /* TITULOS BALLET */
@@ -1470,10 +1528,8 @@ box-shadow:
         </div>
     </section>
 
-    
+  <!-- DRESS CODE -->  
     <section class="dresscode">
-
-  <!-- DRESS CODE -->
   <h2 class="titulo-ballet">Dress Code</h2>
 
   <div class="iconos-dresscode">
@@ -1541,9 +1597,66 @@ box-shadow:
       }
     });
   });
+  
+   /* --------- Apariciones por la derecha --------- */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll(".dresscode .titulo-ballet").forEach(el => {
+    observer.observe(el);
+  });
+  
+   /* --------- Apariciones por la izquierda --------- */
+   document.addEventListener("DOMContentLoaded", () => {
+    const lugarTitle = document.querySelector("#ubicaciones .h");
+
+    if (!lugarTitle) return;
+
+    // Clase base agregada por JS
+    lugarTitle.classList.add("js-appear-left");
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          obs.unobserve(entry.target); // solo una vez
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+    
+    /* --------- Apariciones por abajo --------- */
+    
+    document.addEventListener("DOMContentLoaded", () => {
+  const tarjeta = document.querySelector(".tarjeta-regalo");
+
+  if (!tarjeta) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in");
+        obs.unobserve(entry.target); // anima solo una vez
+      }
+    });
+  }, {
+    threshold: 0.2 // 20% visible antes de animar
+  });
+
+  observer.observe(tarjeta);
+});
+
+    observer.observe(lugarTitle);
+  });
         
         /* --------- Apariciones al hacer scroll --------- */
-        const revealEls = document.querySelectorAll('.photos, .titulo-save, .texto-secundario, .hero-text, .h, .monogram, .reveal, .tile, .card, .step, .g, .btn');
+        const revealEls = document.querySelectorAll('.photos, .titulo-save, .texto-secundario, .h, .monogram, .reveal, .tile, .card, .step, .g, .btn');
         const io = new IntersectionObserver((entries) => {
             entries.forEach(e => {
                 if (e.isIntersecting) {
