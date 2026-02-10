@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Metadatos Open Graph -->
-    <meta property="og:title" content="¡Estás invitado a nuestra boda ❤️! Taylor & Travis">
+    <meta property="og:title" content="¡Estás invitado a nuestra boda ❤️! Taylor & Travis Plantilla 2">
     <meta property="og:description" content="¡Boda Taylor y Travis! Mira todos los detalles aquí.">
     <meta property="og:image" content="https://github.com/EstasInvitado/Taylor-Travis/blob/main/portada.PNG?raw=true">
     <meta property="og:url" content="https://EstasInvitado.github.io/Taylor-Y-Travis/">
@@ -310,6 +310,13 @@
   max-width: 900px;
   padding: 0 20px;
 }
+.imagen-encabezado {
+  display: block;
+  margin: 0 auto 2rem; /* centra y da espacio debajo */
+  max-width: 60%;
+  filter: grayscale(100%); /* convierte a blanco y negro */
+}
+
 
 /* TEXTO PRINCIPAL (Castoro Titling) */
 .texto-principal {
@@ -1337,6 +1344,10 @@ box-shadow:
 <!-- agradecimientos-->
 <section class="agradecimientos" id="agradecimientos">
   <div class="contenedor-agradecimientos">
+        <!-- Imagen en blanco y negro -->
+    <img src="https://github.com/EstasInvitado/Taylor-Y-Travis/blob/main/Floresencabezado.png?raw=true" 
+         alt="Flores encabezado" 
+         class="imagen-encabezado">
     <p class="texto-principal">
       Nos haría inmensamente felices que nos acompañes al inicio de nuestra vida juntos
     </p>
