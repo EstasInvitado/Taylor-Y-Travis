@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,26 +13,14 @@
     <title>Invitación de Boda — Taylor & Travis</title>
 
     <!-- Carga de la fuente Ballet desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
-    <!-- Importa algunas fuentes de ejemplo de la categoría "Fancy" -->
-    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Yrsa&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Hi-Melody&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-
-
-    <!-- Importar fuente Italianno desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 
     <!-- Puedes agregar más fuentes de Google Fonts si lo deseas -->
 
@@ -41,16 +28,10 @@
         :root {
             /* Paleta neutra */
             
-            
-            --ink: #2b2b2b;
-           
+                      
             --line: #d8d4cf;
 
-            /* Imágenes: cámbialas por las tuyas */
-            --hero: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/portada.PNG?raw=true');
-            --img1: url('https://raw.githubusercontent.com/nellyaldana/Nelly-y-samuel/refs/heads/main/img13.png');
-            --img2: url('https://github.com/nellyaldana/Nelly-y-samuel/blob/main/flores5.jpg?raw=true');
-            
+            /* Imágenes: cámbialas por las tuyas */           
             --foto1: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/foto1.PNG?raw=true');
             --foto2: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/pareja4.png?raw=true');
             --foto3: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/pareja5.png?raw=true');
@@ -181,23 +162,10 @@
   }
 }
 
-@keyframes yIn {
-  from {
-    transform: translate(-50%, -20%);
-    opacity: 0;
-  }
-  to {
-    transform: translate(-50%, -50%);
-    opacity: 1;
-  }
-}
+
 @keyframes slideUp {
   from { transform: translateY(40px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
-}
-
-.hero-text.in {
-  animation: slideUp 0.8s ease-out forwards;
 }
 
 
@@ -404,7 +372,7 @@ font-style: italic; /* cursiva */
   color: #111;
   position: relative;
   text-align: center;
-  margin-bottom: 2em; /
+  margin-bottom: 2em; 
    margin-top: 1em;
 }
 
@@ -480,11 +448,7 @@ font-style: italic; /* cursiva */
   margin: 0;
 }
 
-       
-        /*ade aqui hasta donde dice cuenta regresiva estoy intentando poner la galeria de fotos si no funciona quitar esta parte */
-/*elementos foto*/
-
- .foto {
+        .foto {
             padding: 25px 22px;
              background-color: #F5F5F5; /* gris claro elegante */
             
@@ -582,20 +546,7 @@ font-style: italic; /* cursiva */
             font-size: 13px;
             /* primera línea */
         }
-        
-
-
-        .section.alt1 {
-            background-image: var(--img1);
-        }
-        .section.alt2 {
-            padding: 25px 22px;
-            background: var(--bg-3);
-        }
-
-
-
-
+   
 
 
 /* estilo para la palabra Lugar */
@@ -644,7 +595,6 @@ font-style: italic; /* cursiva */
     box-shadow: 0 20px 28px rgba(0, 0, 0, .06);
     max-width: 800px;
     box-sizing: border-box; /* IMPORTANTE */
-    padding: 30px;
     border: 14px solid #fff;
     animation: slideUp 1.8s ease-out forwards; /* antes 0.8s */
     
@@ -702,17 +652,9 @@ font-style: italic; /* cursiva */
         }
 
 
-        .card h3 {
-            font-family: "Luxurous Script";
-            margin: 0 0 8px;
-            font-weight: 400;
-        }
+        
 
-        .card2 p {
-            margin: 6px 0;
-            color: #4d4a45;
-        }
-       
+           
 
         .btn {
             display: inline-block;
@@ -751,47 +693,11 @@ box-shadow:
         }
 
         /* Itinerario */
-        .timeline {
-            border-left: 2px solid var(--line);
-            margin: 8px auto 0;
-            max-width: 680px;
-            padding-left: 30px;
-        }
+    
 
-        .step {
-            font-family: 'Baskerville';
-            font-size: 15px;
-            position: relative;
-            margin: 18px 0;
-            transform: translateY(20px);
-            opacity: 0;
-        }
 
-        .step::before {
-            content: "";
-            position: absolute;
-            left: -20px;
-            top: 6px;
-            width: 12px;
-            height: 12px;
-            background: #fff;
-            border: 2px solid #cbbfb2;
-            border-radius: 50%;
-        }
 
-       
-        }
-
-        .photos {
-            font-weight: 800;
-            font-size: clamp(208px, 4.3vw, 50px);
-            text-align: center;
-            margin: 500px;
-            font-family: 'Fleur de Leah', cursive;
-
-        }
-
-       
+           
 
         .itinerary {
            max-width: 80px;
@@ -1150,43 +1056,12 @@ box-shadow:
 
 
         /* ---------- Animaciones base + apariciones al hacer scroll ---------- */
-        @keyframes aparecerDesdeAbajo {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0
-            }
-
-            to {
-                opacity: 1
-            }
-        }
+     
 
         @keyframes fadeUp {
             from {
                 opacity: 0;
                 transform: translateY(18px)
-            }
-
-            to {
-                opacity: 1;
-                transform: none
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-40px)
             }
 
             to {
@@ -1207,32 +1082,7 @@ box-shadow:
             }
         }
 
-        @keyframes revealUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px) scale(.98)
-            }
-
-            to {
-                opacity: 1;
-                transform: none
-            }
-        }
-
-        @keyframes shimmer {
-
-            0%,
-            100% {
-                opacity: 0;
-                transform: translateX(-40%) rotate(8deg)
-            }
-
-            50% {
-                opacity: .35;
-                transform: translateX(40%) rotate(8deg)
-            }
-        }
-
+      
         @keyframes bounce {
 
             0%,
@@ -1250,21 +1100,7 @@ box-shadow:
             animation: fadeUp 800ms ease forwards;
         }
 
-        .reveal-delay-1.in {
-            animation-delay: 80ms;
-        }
 
-        .reveal-delay-2.in {
-            animation-delay: 160ms;
-        }
-
-        .reveal-delay-3.in {
-            animation-delay: 240ms;
-        }
-
-        .reveal-1.in {
-            animation: slideInLeft 800ms ease forwards;
-        }
 
 
         /* Responsive */
@@ -1273,37 +1109,7 @@ box-shadow:
                 grid-template-columns: 1fr;
             }
 
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-
-            @media (max-width: 640px) {
-                .strips {
-                    grid-template-columns: 1fr 1.2fr 1fr;
-                    gap: 10px;
-                }
-
-                .strip {
-                    height: 58svh;
-                }
-
-                .countdown {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-
-                .timeline {
-                    padding-left: 14px;
-                }
-            }
-
-            @media (prefers-reduced-motion: reduce) {
-                * {
-                    animation: none !important;
-                    transition: none !important
-                }
-            }
-
-
+         
             /* Aquí pones la regla */
             img {
                 border-radius: 0 !important;
@@ -1544,8 +1350,7 @@ box-shadow:
   <h2 class="titulo-ballet">Dress Code</h2>
 
   <div class="iconos-dresscode">
-    <img src="https://github.com/EstasInvitado/Taylor-Y-Travis/blob/main/VestidoEtiqueta.png?raw=true" alt="Vestido">
-    <img src="https://github.com/EstasInvitado/Taylor-Y-Travis/blob/main/TrajeEtiqueta.png?raw=true" alt="Smoking">
+    <img src="https://github.com/EstasInvitado/Taylor-Y-Travis/blob/main/Dresscode.png?raw=true" alt="Smoking">
   </div>
 
   <p class="texto-dresscode">Formal</p>
@@ -1667,7 +1472,7 @@ box-shadow:
   });
         
         /* --------- Apariciones al hacer scroll --------- */
-        const revealEls = document.querySelectorAll('.photos, .titulo-save, .texto-secundario, .h, .monogram, .reveal, .tile, .card, .step, .g, .btn');
+        const revealEls = document.querySelectorAll('.titulo-save, .texto-secundario, .h, .reveal, .card, .g, .btn');
         const io = new IntersectionObserver((entries) => {
             entries.forEach(e => {
                 if (e.isIntersecting) {
