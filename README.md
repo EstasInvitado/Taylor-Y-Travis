@@ -33,7 +33,7 @@
 
             /* Imágenes: cámbialas por las tuyas */           
             --foto1: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/foto1.PNG?raw=true');
-            --foto2: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/pareja4.png?raw=true');
+            --foto2: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/portada.PNG?raw=true');
             --foto3: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/pareja5.png?raw=true');
 
             --line-gap: 80px;
